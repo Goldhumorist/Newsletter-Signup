@@ -33,11 +33,11 @@ app.post("/" , (req, res) => {
 
     let jsonData = JSON.stringify(data);
 
-    const url =  "https://us20.api.mailchimp.com/3.0/lists/fc11ecbb9d";
+    const url =  "https://us20.api.mailchimp.com/3.0/lists/X"; // x secret key
 
     const options = {
         method: "POST",
-        auth: "goldhumorist:d608bb36a72df73087f3a85052501c40-us20"
+        auth: "goldhumorist:apiKey" // api key
     }
     const request = https.request(url , options , (response)=>{
         if(response.statusCode === 200) {
